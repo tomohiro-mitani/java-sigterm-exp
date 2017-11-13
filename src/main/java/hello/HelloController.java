@@ -16,7 +16,7 @@ public class HelloController {
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
-            return "Interruption Exception";
+            return "Interruption Exception for 5s res";
         }
         return "5 Seconds Response!!!!!!!!!!";
     }
@@ -26,9 +26,9 @@ public class HelloController {
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
-            return "Interruption Exception";
+            return "Interruption Exception for 10s res";
         }
-        return "5 Seconds Response!!!!!!!!!!";
+        return "10 Seconds Response!!!!!!!!!!";
     }
 
     @RequestMapping("/30")
@@ -36,9 +36,9 @@ public class HelloController {
         try {
             Thread.sleep(30000);
         } catch (InterruptedException e) {
-            return "Interruption Exception";
+            return "Interruption Exception for 30s res";
         }
-        return "5 Seconds Response!!!!!!!!!!";
+        return "30 Seconds Response!!!!!!!!!!";
     }
 
 }
