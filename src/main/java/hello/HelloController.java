@@ -11,13 +11,26 @@ public class HelloController {
         return "Greetings from Spring Boot!";
     }
 
+    @RequestMapping("/2")
+    public String index1() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            return "Interruption Exception for 2s res";
+        }
+        return "2 Seconds Response!!!!!!!!!!";
+    }
+
     @RequestMapping("/5")
     public String index2() {
         try {
+            System.out.println("Sleeping starts");
             Thread.sleep(5000);
+            System.out.println("Awake");
         } catch (InterruptedException e) {
             return "Interruption Exception for 5s res";
         }
+        System.out.println("Sending Response for 5s");
         return "5 Seconds Response!!!!!!!!!!";
     }
 
@@ -29,6 +42,16 @@ public class HelloController {
             return "Interruption Exception for 10s res";
         }
         return "10 Seconds Response!!!!!!!!!!";
+    }
+
+    @RequestMapping("/20")
+    public String index6() {
+        try {
+            Thread.sleep(20000);
+        } catch (InterruptedException e) {
+            return "Interruption Exception for 20s res";
+        }
+        return "20 Seconds Response!!!!!!!!!!";
     }
 
     @RequestMapping("/30")
