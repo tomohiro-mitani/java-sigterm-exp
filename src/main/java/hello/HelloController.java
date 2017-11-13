@@ -24,9 +24,9 @@ public class HelloController {
     @RequestMapping("/5")
     public String index2() {
         try {
-            System.out.println("Sleeping starts");
+            System.out.println("Sleeping 5s starts");
             Thread.sleep(5000);
-            System.out.println("Awake");
+            System.out.println("Awake after 5s");
         } catch (InterruptedException e) {
             return "Interruption Exception for 5s res";
         }
@@ -37,10 +37,13 @@ public class HelloController {
     @RequestMapping("/10")
     public String index3() {
         try {
+            System.out.println("Sleeping 10s starts");
             Thread.sleep(10000);
+            System.out.println("Awake after 10s");
         } catch (InterruptedException e) {
             return "Interruption Exception for 10s res";
         }
+        System.out.println("Sending Response for 10s");
         return "10 Seconds Response!!!!!!!!!!";
     }
 
