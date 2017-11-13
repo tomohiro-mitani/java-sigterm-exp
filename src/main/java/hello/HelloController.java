@@ -41,4 +41,9 @@ public class HelloController {
         return "30 Seconds Response!!!!!!!!!!";
     }
 
+    @RequestMapping("/loaderio-ab515cae3e3fdf5680e09e1e488ac69e.html")
+    public String index5() {
+        return "loaderio-ab515cae3e3fdf5680e09e1e488ac69e";
+    }
+
 }
