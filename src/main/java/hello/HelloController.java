@@ -1,5 +1,6 @@
 package hello;
 
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -7,11 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HelloController {
     
     @RequestMapping("/")
+    @ResponseBody
     public String index() {
         return "Greetings from Spring Boot!";
     }
 
     @RequestMapping("/2")
+    @ResponseBody
     public String index1() {
         try {
             Thread.sleep(2000);
@@ -22,6 +25,7 @@ public class HelloController {
     }
 
     @RequestMapping("/5")
+    @ResponseBody
     public String index2() {
         try {
             System.out.println("Sleeping 5s starts");
@@ -35,6 +39,7 @@ public class HelloController {
     }
 
     @RequestMapping("/10")
+    @ResponseBody
     public String index3() {
         try {
             System.out.println("Sleeping 10s starts");
@@ -48,6 +53,7 @@ public class HelloController {
     }
 
     @RequestMapping("/20")
+    @ResponseBody
     public String index6() {
         try {
             Thread.sleep(20000);
@@ -58,6 +64,7 @@ public class HelloController {
     }
 
     @RequestMapping("/30")
+    @ResponseBody
     public String index4() {
         try {
             Thread.sleep(30000);
