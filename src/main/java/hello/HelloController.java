@@ -16,62 +16,54 @@ public class HelloController {
     @RequestMapping("/2")
     @ResponseBody
     public String index1() {
+        System.out.println("2s response recevied");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
-            return "Interruption Exception for 2s res";
+            System.out.println("Interuption Exception");
         }
-        return "2 Seconds Response!!!!!!!!!!";
+        System.out.println("5s response sent");
+        return "2s Response!!!!!!!!!!";
     }
 
     @RequestMapping("/5")
     @ResponseBody
     public String index2() {
+        System.out.println("5s response recevied");
         try {
-            System.out.println("Sleeping 5s starts");
             Thread.sleep(5000);
-            System.out.println("Awake after 5s");
         } catch (InterruptedException e) {
-            return "Interruption Exception for 5s res";
+            System.out.println("Interuption Exception");
         }
-        System.out.println("Sending Response for 5s");
-        return "5 Seconds Response!!!!!!!!!!";
+        System.out.println("5s response sent");
+        return "5s Seconds Response!!!!!!!!!!";
     }
 
     @RequestMapping("/10")
     @ResponseBody
     public String index3() {
+        System.out.println("10s response snet");
         try {
-            System.out.println("Sleeping 10s starts");
             Thread.sleep(10000);
-            System.out.println("Awake after 10s");
         } catch (InterruptedException e) {
-            return "Interruption Exception for 10s res";
+            System.out.println("Interuption Exception");
         }
-        System.out.println("Sending Response for 10s");
-        return "10 Seconds Response!!!!!!!!!!";
+        System.out.println("Sending Response");
+        System.out.println("10s response recevied");
+        return "10s Response!!!!!!!!!!";
     }
 
     @RequestMapping("/20")
     @ResponseBody
     public String index6() {
+        System.out.println("20s response snet");
         try {
             Thread.sleep(20000);
         } catch (InterruptedException e) {
-            return "Interruption Exception for 20s res";
+            System.out.println("Interuption Exception");
         }
+        System.out.println("20s response recevied");
         return "20 Seconds Response!!!!!!!!!!";
-    }
-
-    @RequestMapping("/30")
-    @ResponseBody
-    public String index4() {
-        try {
-            Thread.sleep(30000);
-        } catch (InterruptedException e) {
-            return "Interruption Exception for 30s res";
-        }
-        return "30 Seconds Response!!!!!!!!!!";
     }
 
     @RequestMapping("/loaderio-ab515cae3e3fdf5680e09e1e488ac69e.html")
