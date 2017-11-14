@@ -42,27 +42,27 @@ public class HelloController {
     @RequestMapping("/10")
     @ResponseBody
     public String index3() {
-        System.out.println("10s response snet");
+        System.out.println("10s response received");
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             System.out.println("Interuption Exception");
         }
         System.out.println("Sending Response");
-        System.out.println("10s response recevied");
+        System.out.println("10s response sent");
         return "10s Response!!!!!!!!!!";
     }
 
     @RequestMapping("/20")
     @ResponseBody
     public String index6() {
-        System.out.println("20s response snet");
+        System.out.println("20s response received");
         try {
             Thread.sleep(20000);
         } catch (InterruptedException e) {
             System.out.println("Interuption Exception");
         }
-        System.out.println("20s response recevied");
+        System.out.println("20s response sent");
         return "20 Seconds Response!!!!!!!!!!";
     }
 
